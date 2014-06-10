@@ -4,6 +4,7 @@
 // @namespace http://projekt2k.de/
 // @description Redmine User Select Helper
 // @match http://demo.redmine.org/*
+// @match https://redmine.mobdim.com/*
 // @version 0.6
 // ==/UserScript==
 
@@ -97,8 +98,8 @@ function wrapper() {
 
                 var currentTopItems = redmineExtender.helper.fetch("topUsers");
                 redmineExtender.helper.showUserSelector(
-                    'Top-User auswählen',
-                    'Bitte wählen Sie die Nutzer, die oben gelistet werden sollen',
+                    'Выберите ТОП-пользователей',
+                    'Пожалуйста, выберите пользователей, которые должны быть перечислены выше',
                     currentTopItems,
                     function(selected) {
                         redmineExtender.helper.store("topUsers", selected);
