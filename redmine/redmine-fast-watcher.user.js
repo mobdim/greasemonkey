@@ -4,6 +4,7 @@
 // @namespace http://stesie.github.io/
 // @description Redmine Fast Watcher
 // @match http://demo.redmine.org/*
+// @match https://redmine.mobdim.com/*
 // @version 0.1
 // ==/UserScript==
 
@@ -46,10 +47,10 @@ function wrapper() {
                         .append($('<a>', {
                             href: '#',
                             click: redmineExtender.extensions.fastWatcher.askForFastWatchers,
-                            text: 'Konfigurieren'
+                            text: 'Настройка'
                         })))
                 .append($('<h3>', {
-                    text: 'Beobachter-Kürzel'
+                    text: 'Наблюдатели'
                 }));
 
                 var $list = $('<ul>', { 'class': 'watchers' })
@@ -101,8 +102,8 @@ function wrapper() {
                 }
 
                 redmineExtender.helper.showUserSelector(
-                    'Fast-Watchers auswählen',
-                    'Bitte wählen Sie die Nutzer, für die Abkürzungen gelistet werden sollen',
+                    'Выберите наблюдателей',
+                    'Пожалуйста, выберите пользователей',
                     redmineExtender.helper.fetch('fastWatchers.uidList'),
                     function(selected) {
                         redmineExtender.helper.store('fastWatchers.uidList', selected);
