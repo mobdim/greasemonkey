@@ -4,6 +4,7 @@
 // @namespace http://stesie.github.io/
 // @description Redmine Extender
 // @match http://demo.redmine.org/*
+// @match https://redmine.mobdim.com/*
 // @version 0.4
 // ==/UserScript==
 
@@ -131,7 +132,7 @@ function wrapper() {
                     title: title,
                     buttons: [
                         {
-                            text: "Speichern",
+                            text: "Сохранить",
                             click: function() {
                                 var selected = jQuery('#userselect').val();
                                 $dialogContent.dialog('destroy');

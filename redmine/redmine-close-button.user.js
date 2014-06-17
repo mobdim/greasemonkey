@@ -4,6 +4,7 @@
 // @namespace http://stesie.github.io/
 // @description Redmine Close Button Extension
 // @match http://demo.redmine.org/*
+// @match https://redmine.mobdim.com/*
 // @version 0.4
 // ==/UserScript==
 
@@ -61,7 +62,7 @@ function wrapper() {
                 };
                 var closeButtonTemplate = $('a.redmine-close-button');
                 areas.each(function() {
-                    var closeButton = $("<a>").attr("href", "").addClass("icon icon-close redmine-close-button").html("Schließen")
+                    var closeButton = $("<a>").attr("href", "").addClass("icon icon-close redmine-close-button").html("Закрыть")
                     .click(closer);
                     
                     var delButton = $(this).find('a.icon-del');

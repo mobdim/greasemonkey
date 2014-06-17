@@ -4,6 +4,7 @@
 // @namespace http://stesie.github.io/
 // @description Redmine Toolbar Modifier
 // @match http://demo.redmine.org/*
+// @match https://redmine.mobdim.com/*
 // @version 0.2
 // ==/UserScript==
 
